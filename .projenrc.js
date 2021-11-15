@@ -1,5 +1,5 @@
-const { TypeScriptProject } = require('projen');
-const project = new TypeScriptProject({
+const { TypeScriptAppProject } = require('projen');
+const project = new TypeScriptAppProject({
   defaultReleaseBranch: 'main',
   name: 'repository-pattern',
 
@@ -26,5 +26,20 @@ const project = new TypeScriptProject({
   ], /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
   // release: undefined,      /* Add release management to this project. */
+  tsconfig: {
+    compilerOptions: {
+      outDir: 'dist',
+      allowSyntheticDefaultImports: true,
+      moduleResolution: 'node',
+      esModuleInterop: true,
+      target: 'es6',
+    },
+  },
+  scripts: {
+    serve: 'nodemon --exec node ./dist/server.js',
+  },
+  gitignore: [
+    '.env',
+  ],
 });
 project.synth();
