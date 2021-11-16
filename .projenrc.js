@@ -4,6 +4,7 @@ const project = new TypeScriptAppProject({
   name: 'repository-pattern',
 
   deps: [
+    'apidoc',
     'express',
     'body-parser',
     'cors',
@@ -20,7 +21,6 @@ const project = new TypeScriptAppProject({
     '@types/node',
     '@types/bcrypt-nodejs',
     '@types/cors',
-    '@types/mongoose',
     '@types/passport',
     '@types/passport-jwt',
     'nodemon',
@@ -37,10 +37,12 @@ const project = new TypeScriptAppProject({
     },
   },
   scripts: {
+    build_api: 'apidoc -i src/routers -o apidocs/',
     serve: 'nodemon --exec node ./dist/server.js',
   },
   gitignore: [
     '.env',
+    '**/apidocs/',
   ],
 });
 project.synth();

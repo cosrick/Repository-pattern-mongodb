@@ -2,6 +2,7 @@
   "name": "repository-pattern",
   "scripts": {
     "build": "npx projen build",
+    "build_api": "npx projen build_api",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
@@ -22,7 +23,6 @@
     "@types/bcrypt-nodejs": "^0.0.31",
     "@types/cors": "^2.8.12",
     "@types/jest": "^27.0.2",
-    "@types/mongoose": "^5.11.97",
     "@types/node": "^14.17.0",
     "@types/passport": "^1.0.7",
     "@types/passport-jwt": "^3.0.6",
@@ -42,6 +42,7 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
+    "apidoc": "^0.50.1",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

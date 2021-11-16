@@ -13,10 +13,6 @@
       "type": "build"
     },
     {
-      "name": "@types/mongoose",
-      "type": "build"
-    },
-    {
       "name": "@types/node",
       "version": "^14.17.0",
       "type": "build"
@@ -86,6 +82,10 @@
     {
       "name": "typescript",
       "type": "build"
+    },
+    {
+      "name": "apidoc",
+      "type": "runtime"
     },
     {
       "name": "bcrypt-nodejs",
