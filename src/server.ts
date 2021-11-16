@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 import express, { json, urlencoded } from 'express';
 dotenv.config({ path: __dirname + '../.env' });
+import { adminRouter } from './routers';
 
 const app = express();
 
@@ -12,11 +13,12 @@ app.use(json());
 // For parsing application/x-www-form-urlencoded
 app.use(urlencoded({ extended: true }));
 
+app.use('/api', adminRouter);
+
 app.get('/', function (_req, res) {
   res.send('Hello World!!');
 });
 
 app.listen(port, function () {
-  console.log(`Example app listening on port ${port}!`);
-  console.log('wwwww');
+  console.log(`Server listening on port ${port}!`);
 });
