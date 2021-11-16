@@ -112,6 +112,10 @@
       "type": "runtime"
     },
     {
+      "name": "jsonwebtoken",
+      "type": "runtime"
+    },
+    {
       "name": "mongoose",
       "type": "runtime"
     },
