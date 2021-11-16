@@ -3,6 +3,35 @@ import Joi from 'joi';
 import { Admin } from '../../models';
 import { RepositoryFactory } from '../../repositories';
 
+/**
+ * @api {post} /api/admin Create one admin
+ * @apiName CreateAdmin
+ * @apiGroup Admin
+ *
+ * @apiBody {String} name admin's name
+ * @apiBody {String} password admin's personal password
+ * @apiBody {String} id admin's id
+ * @apiBody {String} email teacher's email
+ *
+ * @apiSuccess {Object} data admin object that just be created
+ * @apiSuccess {String} data._id admin's object id
+ * @apiSuccess {String} data.name admin's name
+ * @apiSuccess {String} data.id admin's id
+ * @apiSuccess {String} data.email admin's email
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *    data: {
+ *      "_id": "6189f67f256b654a514b7924"
+ *      "name": "李大仁",
+ *      "id": "CA12345",
+ *      "email": "CA12345@school.com",
+ *    }
+ * }
+ *
+ * @apiUse UnprocessableEntityError
+ * @apiUse InternalServerError
+ */
+
 export default async function ( req: Request, res: Response) {
 
   //Validate the fields in the request.body

@@ -9,11 +9,11 @@
       "type": "build"
     },
     {
-      "name": "@types/jest",
+      "name": "@types/ejs",
       "type": "build"
     },
     {
-      "name": "@types/mongoose",
+      "name": "@types/jest",
       "type": "build"
     },
     {
@@ -88,6 +88,10 @@
       "type": "build"
     },
     {
+      "name": "apidoc",
+      "type": "runtime"
+    },
+    {
       "name": "bcrypt-nodejs",
       "type": "runtime"
     },
@@ -101,6 +105,10 @@
     },
     {
       "name": "dotenv",
+      "type": "runtime"
+    },
+    {
+      "name": "ejs",
       "type": "runtime"
     },
     {

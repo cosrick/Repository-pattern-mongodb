@@ -4,7 +4,9 @@ const project = new TypeScriptAppProject({
   name: 'repository-pattern',
 
   deps: [
+    'apidoc',
     'express',
+    'ejs',
     'body-parser',
     'cors',
     'dotenv',
@@ -17,10 +19,10 @@ const project = new TypeScriptAppProject({
   ], /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
+    '@types/ejs',
     '@types/node',
     '@types/bcrypt-nodejs',
     '@types/cors',
-    '@types/mongoose',
     '@types/passport',
     '@types/passport-jwt',
     'nodemon',
@@ -37,10 +39,12 @@ const project = new TypeScriptAppProject({
     },
   },
   scripts: {
+    build_api: 'apidoc -i src/routers -o apidocs/',
     serve: 'nodemon --exec node ./dist/server.js',
   },
   gitignore: [
     '.env',
+    '**/apidocs/',
   ],
 });
 project.synth();
