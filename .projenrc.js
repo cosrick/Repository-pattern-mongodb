@@ -6,6 +6,7 @@ const project = new TypeScriptAppProject({
   deps: [
     'apidoc',
     'express',
+    'ejs',
     'body-parser',
     'cors',
     'dotenv',
@@ -18,6 +19,7 @@ const project = new TypeScriptAppProject({
   ], /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
+    '@types/ejs',
     '@types/node',
     '@types/bcrypt-nodejs',
     '@types/cors',

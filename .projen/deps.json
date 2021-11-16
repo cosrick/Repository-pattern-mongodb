@@ -9,6 +9,10 @@
       "type": "build"
     },
     {
+      "name": "@types/ejs",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -101,6 +105,10 @@
     },
     {
       "name": "dotenv",
+      "type": "runtime"
+    },
+    {
+      "name": "ejs",
       "type": "runtime"
     },
     {
