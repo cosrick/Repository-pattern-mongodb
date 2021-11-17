@@ -46,5 +46,6 @@ const project = new TypeScriptAppProject({
     '.env',
     '**/apidocs/',
   ],
+  buildWorkflow: false,
 });
 project.synth();
